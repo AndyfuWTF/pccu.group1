@@ -5,7 +5,6 @@
 using namespace std;
 
 Chess::Chess() {
-    // 設定棋盤(白為大寫，黑為小寫)和白棋先走
     board = {
         {'r', 'n', 'b', 'q', 'k', 'b', 'n', 'r'},
         {'p', 'p', 'p', 'p', 'p', 'p', 'p', 'p'},
@@ -48,7 +47,6 @@ bool Chess::isWhiteTurn() const { return whiteTurn; }
 void Chess::switchTurn() { whiteTurn = !whiteTurn; }
 
 
-//檢測王城換位條件是否成立(如果王或車移動就就無法換位，且路徑內不可有阻擋)
 bool Chess::hasKingMoved(bool isWhite) const { return isWhite ? whiteKingMoved : blackKingMoved; }
 bool Chess::hasLeftRookMoved(bool isWhite) const { return isWhite ? whiteLeftRookMoved : blackLeftRookMoved; }
 bool Chess::hasRightRookMoved(bool isWhite) const { return isWhite ? whiteRightRookMoved : blackRightRookMoved; }
