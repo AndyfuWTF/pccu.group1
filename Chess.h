@@ -11,7 +11,6 @@ private:
     vector<vector<char>> board;
     bool whiteTurn;
     
-    // 紀錄王車是否移動過（王城換位必備條件）
     bool whiteKingMoved;
     bool whiteLeftRookMoved;
     bool whiteRightRookMoved;
@@ -27,7 +26,6 @@ public:
     bool isWhiteTurn() const;
     void switchTurn();
     
-    // 王城換位相關狀態
     bool hasKingMoved(bool isWhite) const;
     bool hasLeftRookMoved(bool isWhite) const;
     bool hasRightRookMoved(bool isWhite) const;
