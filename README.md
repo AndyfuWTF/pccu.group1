@@ -57,7 +57,7 @@
 ### 使用者輸入X和Y軸來選擇棋子，並再以相同方式選擇目的地
 
 # UML圖:
-![image]()
+![image](https://github.com/AndyfuWTF/pccu.group1/blob/main/UML.png)
 
 # 流程圖:
 ![image](https://github.com/AndyfuWTF/pccu.group1/blob/main/流程圖.png)
