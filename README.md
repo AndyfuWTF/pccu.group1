@@ -7,6 +7,6 @@
 # 小專題題目:西洋棋棋盤
 
 # 程式介紹:
-![image](https://github.com/AndyfuWTF/pccu.group1/blob/main/uml.png?raw=true)
+![image](https://github.com/AndyfuWTF/pccu.group1/blob/main/流程圖.png)
 ### 使用者可以輸入棋子位置的x、y值來選擇，並且再輸入x、y值來選擇移動位置並且會判斷移動是否合法，如過不合法就會輸出"操作不合法"，並且讓使用者再輸入一次，當一方的國王被將死時遊戲結束宣布一方勝利
 
