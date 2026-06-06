@@ -168,7 +168,7 @@ bool Judge::checkGameOver(Chess& game, int fullMoveCount) {
         if (isKingInCheck(game, whiteTurn)) {
             cout << (whiteTurn ? "黑方" : "白方") << " 獲勝！\n";
         } else {
-            cout << "【棋局結束】和局。\n";
+            cout << "和局。\n";
         }
         return true;
     }
