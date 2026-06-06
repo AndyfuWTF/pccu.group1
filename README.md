@@ -70,6 +70,10 @@
 ![image](https://github.com/AndyfuWTF/pccu.group1/blob/main/test1.png)
 ![image](https://github.com/AndyfuWTF/pccu.group1/blob/main/test2.png)
 
+# 分工資訊
+
+### 傅榆翔    林享聖    劉佩翰
+
 
 
 
