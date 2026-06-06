@@ -67,6 +67,10 @@
 ![image](https://github.com/AndyfuWTF/pccu.group1/blob/main/流程圖.png)
 
 # 運行畫面截圖:
+![image](https://github.com/AndyfuWTF/pccu.group1/blob/main/test1.png)
+![image](https://github.com/AndyfuWTF/pccu.group1/blob/main/test2.png)
+
+
 
 
 
