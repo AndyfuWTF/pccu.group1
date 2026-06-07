@@ -88,7 +88,7 @@ int main() {
                 game.setPiece(r2, c2, movingPiece);
                 game.setPiece(r1, c1, '.');
 
-                cout << "成功將 " << movingPiece << " 從 " << input1 << " 移動到 " << input2 << "\n";
+                cout << "成功將 " << movingPiece << " 從 " << input1 << " 移動到 " << input2 << " 。" <<"\n";
                 moved = true; 
             } else {
                 cout << "該棋子無法如此移動。\n";
