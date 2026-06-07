@@ -35,7 +35,7 @@ int main() {
         cout << "第 " << fullMoveCount << " 回合 | " << (isWhite ? "白棋 (大寫)" : "黑棋 (小寫)") << " 的回合。\n";
         
         if (judge.isKingInCheck(game, isWhite)) {
-            cout << "注意：你的王正在被將軍！你必須做出能解將的移動！\n";
+            cout << "你的王正在被將軍！\n";
         }
         cout << "請輸入指令: ";
         
