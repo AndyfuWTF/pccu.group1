@@ -91,7 +91,7 @@ int main() {
                 cout << "成功將 " << movingPiece << " 從 " << input1 << " 移動到 " << input2 << "\n";
                 moved = true; 
             } else {
-                cout << "違規移動！該棋子無法如此移動，或移動會導致己方國王被將軍（或無法解將）。\n";
+                cout << "該棋子無法如此移動。\n";
                 continue;
             }
         }
