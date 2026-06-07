@@ -32,11 +32,10 @@ int main() {
         game.displayBoard();
         bool isWhite = game.isWhiteTurn();
         
-
         cout << "第 " << fullMoveCount << " 回合 | " << (isWhite ? "白棋 (大寫)" : "黑棋 (小寫)") << " 的回合。\n";
         
         if (judge.isKingInCheck(game, isWhite)) {
-            cout << "你的王正在被將軍！\n";
+            cout << "⚠️  注意：你的王正在被將軍！你必須做出能解將的移動！\n";
         }
         cout << "請輸入指令: ";
         
@@ -79,6 +78,14 @@ int main() {
                     judge.incrementHalfMove();
                 }
 
+                if (tolower(targetPiece) == 'r') {
+                    int opponentBackRow = isWhite ? 0 : 7;
+                    if (r2 == opponentBackRow) {
+                        if (c2 == 0) game.setRookMoved(!isWhite, true);
+                        if (c2 == 7) game.setRookMoved(!isWhite, false);
+                    }
+                }
+
                 if (tolower(movingPiece) == 'k') game.setKingMoved(isWhite);
                 if (tolower(movingPiece) == 'r') {
                     if (c1 == 0) game.setRookMoved(isWhite, true);
@@ -88,7 +95,21 @@ int main() {
                 game.setPiece(r2, c2, movingPiece);
                 game.setPiece(r1, c1, '.');
 
-                cout << "成功將 " << movingPiece << " 從 " << input1 << " 移動到 " << input2 << " 。" <<"\n";
+                if (tolower(movingPiece) == 'p' && (r2 == 0 || r2 == 7)) {
+                    char promoteType;
+                    cout << "兵已到達底線，請選擇晉升棋子。";
+                    while (cin >> promoteType) {
+                        promoteType = toupper(promoteType);
+                        if (promoteType == 'Q' || promoteType == 'R' || promoteType == 'B' || promoteType == 'N') {
+                            break;
+                        }
+                        cout << "請重新輸入。";
+                    }
+                    char newPiece = isWhite ? toupper(promoteType) : tolower(promoteType);
+                    game.setPiece(r2, c2, newPiece);
+                }
+
+                cout << "成功將 " << movingPiece << " 從 " << input1 << " 移動到 " << input2 << "。" << "\n";
                 moved = true; 
             } else {
                 cout << "該棋子無法如此移動。\n";
